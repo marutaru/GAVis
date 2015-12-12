@@ -6,7 +6,7 @@ fs = require 'fs'
 
 
 
-
+filepath = "null"
 
 document.getElementById("btn").onclick = ->
   console.log "dialog"
@@ -21,4 +21,5 @@ document.getElementById("btn").onclick = ->
         console.log data
     else
       alert "Not a file!"
+
 
