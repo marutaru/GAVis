@@ -7,10 +7,14 @@ fs = require 'fs'
 
 
 filepath = "null"
+options =
+  filters:[
+    name:'csv',extensions:['csv']
+  ]
 
 document.getElementById("btn").onclick = ->
   console.log "dialog"
-  dialog.showOpenDialog (filepath) ->
+  dialog.showOpenDialog options,(filepath) ->
     console.log "file path:"+filepath
     stat = fs.statSync("#{filepath}")
     console.log "stat:%O",stat
